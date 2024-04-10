@@ -1,10 +1,13 @@
 import './Box.css'
 
-const Box = ({onClick, value}) => {
-    const style = value === 'X' ? 'box x' : 'box o'
-
+const Box = ({onClick, gameOver, value}) => {
+    let style = value === 'X' ? 'box x' : 'box o'
+    if (!gameOver) {
+        style += ' box-shadow'
+    }
+    console.log(gameOver)
     return (
-        <button className={style} onClick={onClick}>{value}</button>
+        <button disabled={gameOver} className={style} onClick={onClick}>{value}</button>
     )
 }
 
