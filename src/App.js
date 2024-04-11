@@ -32,7 +32,7 @@ function App() {
     })
 
     setBoard(updatedBoard);
-
+    
     const winner = checkWinner(updatedBoard);
 
     if(winner) {

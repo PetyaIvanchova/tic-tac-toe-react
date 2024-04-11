@@ -5,7 +5,7 @@ const Box = ({onClick, gameOver, value}) => {
     if (!gameOver) {
         style += ' box-shadow'
     }
-    console.log(gameOver)
+    
     return (
         <button disabled={gameOver} className={style} onClick={onClick}>{value}</button>
     )
